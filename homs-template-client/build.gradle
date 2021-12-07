@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    implementation platform('org.springframework.boot:spring-boot-dependencies:2.5.3')
+
+    implementation 'com.google.protobuf:protobuf-java:1.39.0'
+    implementation "io.grpc:grpc-stub:1.39.0"
+    implementation "io.grpc:grpc-protobuf:1.39.0"
+    implementation 'io.grpc:grpc-netty-shaded:1.39.0'
+
+    implementation "org.slf4j:slf4j-api:1.7.3"
+
+    implementation 'org.springframework.boot:spring-boot-autoconfigure:2.2.0.RELEASE'
+
+}

@@ -1,0 +1,3 @@
+rootProject.name = 'homs-microservice-template'
+include 'homs-template-client'
+include 'homs-template-server'

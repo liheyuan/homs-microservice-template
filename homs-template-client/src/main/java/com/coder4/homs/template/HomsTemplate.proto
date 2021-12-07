@@ -1,0 +1,22 @@
+syntax = "proto3";
+option java_package = "com.coder4.homs.template";
+option java_outer_classname = "HomsTemplateProto";
+;
+
+message AddRequest {
+    int32 val1 = 1;
+    int32 val2 = 2;
+}
+
+message AddResponse {
+    int32 val = 1;
+}
+
+message AddSingleRequest {
+    int32 val = 1;
+}
+
+service HomsTemplate {
+    rpc Add(AddRequest) returns (AddResponse);
+    rpc Add2(stream AddSingleRequest) returns (AddResponse);
+}

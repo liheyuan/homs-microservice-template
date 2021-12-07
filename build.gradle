@@ -1,0 +1,19 @@
+plugins {
+
+  id 'java'
+  id 'idea'
+  id 'org.springframework.boot' version '2.5.3' apply false
+  id 'io.spring.dependency-management' version '1.0.11.RELEASE' apply false
+  id "io.freefair.lombok" version "5.3.3.3" apply false
+
+}
+
+subprojects {
+
+  group = 'com.coder4'
+  version = '0.0.1-SNAPSHOT'
+  sourceCompatibility = '1.8'
+
+}
+
+
