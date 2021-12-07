@@ -6,12 +6,16 @@
  */
 package com.coder4.homs.template.server.server.grpc;
 
+import com.coder4.homs.template.HomsTemplateGrpc.HomsTemplateImplBase;
+import com.coder4.homs.template.HomsTemplateProto.AddRequest;
+import com.coder4.homs.template.HomsTemplateProto.AddResponse;
+import com.coder4.homs.template.HomsTemplateProto.AddSingleRequest;
 import io.grpc.stub.StreamObserver;
 
 /**
  * @author coder4
  */
-public final class HomsTemplateGrpcImpl extends HomsDemoImplBase {
+public final class HomsTemplateGrpcImpl extends HomsTemplateImplBase {
 
     @Override
     public void add(AddRequest request, StreamObserver<AddResponse> responseObserver) {

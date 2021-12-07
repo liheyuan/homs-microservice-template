@@ -6,6 +6,9 @@
  */
 package com.coder4.homs.template.client;
 
+import com.coder4.homs.template.HomsTemplateGrpc;
+import com.coder4.homs.template.HomsTemplateProto.AddRequest;
+import com.coder4.homs.template.HomsTemplateProto.AddResponse;
 import io.grpc.Channel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,7 +24,7 @@ public class HomsDemoGrpcClient extends HSGrpcClient {
     private Logger LOG = LoggerFactory.getLogger(HomsDemoGrpcClient.class);
 
 
-    private HomsDemoGrpc.HomsDemoFutureStub futureStub;
+    private HomsTemplateGrpc.HomsTemplateFutureStub futureStub;
 
     /**
      * Construct client for accessing HelloWorld server using the existing channel.
@@ -32,7 +35,7 @@ public class HomsDemoGrpcClient extends HSGrpcClient {
 
     @Override
     protected void initSub(Channel channel) {
-        futureStub = HomsDemoGrpc.newFutureStub(channel);
+        futureStub = HomsTemplateGrpc.newFutureStub(channel);
     }
 
     public Optional<Integer> add(int val1, int val2) {
