@@ -37,7 +37,7 @@ public class SimpleGrpcClientManager<T extends HSGrpcClient> extends AbstractGrp
     }
 
     public static void main(String[] args) throws Exception {
-        SimpleGrpcClientManager<HomsDemoGrpcClient> manager = new SimpleGrpcClientManager(HomsDemoGrpcClient.class, "127.0.0.1", 5000);
+        SimpleGrpcClientManager<HomsAbcGrpcClient> manager = new SimpleGrpcClientManager(HomsAbcGrpcClient.class, "127.0.0.1", 5000);
         manager.init();
         manager.getClient().ifPresent(t -> System.out.println(t.add(1, 2)));
         manager.shutdown();

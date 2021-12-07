@@ -19,9 +19,9 @@ import java.util.Optional;
 /**
  * @author coder4
  */
-public class HomsDemoGrpcClient extends HSGrpcClient {
+public class HomsAbcGrpcClient extends HSGrpcClient {
 
-    private Logger LOG = LoggerFactory.getLogger(HomsDemoGrpcClient.class);
+    private Logger LOG = LoggerFactory.getLogger(HomsAbcGrpcClient.class);
 
 
     private HomsTemplateGrpc.HomsTemplateFutureStub futureStub;
@@ -29,7 +29,7 @@ public class HomsDemoGrpcClient extends HSGrpcClient {
     /**
      * Construct client for accessing HelloWorld server using the existing channel.
      */
-    public HomsDemoGrpcClient(String ip, int port) {
+    public HomsAbcGrpcClient(String ip, int port) {
         super(ip, port);
     }
 
@@ -53,9 +53,9 @@ public class HomsDemoGrpcClient extends HSGrpcClient {
     // Test
     public static void main(String[] args) throws InterruptedException {
 
-        Logger LOG = LoggerFactory.getLogger(HomsDemoGrpcClient.class);
+        Logger LOG = LoggerFactory.getLogger(HomsAbcGrpcClient.class);
 
-        try (HomsDemoGrpcClient client = new HomsDemoGrpcClient("127.0.0.1", 5000)) {
+        try (HomsAbcGrpcClient client = new HomsAbcGrpcClient("127.0.0.1", 5000)) {
             client.init();
             System.out.println(client.add(1, 2));
         } catch (Exception e) {

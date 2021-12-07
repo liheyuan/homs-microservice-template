@@ -9,7 +9,7 @@ package com.coder4.homs.template.constant;
 /**
  * @author coder4
  */
-public class HomsDemoConstant {
+public class HomsAbcConstant {
 
     public static final String SERVICE_NAME = "homs-demo";
 
